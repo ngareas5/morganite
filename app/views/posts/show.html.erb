@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <p>
+ <strong>Title:</strong>
+ <%#= @post.title %>
+</p> -->
+
+<strong>image:</strong>
+<!-- <div style="width:100px ; height:200px"> -->
+  
+  <%=image_tag (@post.image) if @post.image.attached?  %> 
+</div>
+<p>
+  <strong>Content:</strong>
+  <%= @post.content %>
+</p>
+
+<%#= button_to 'Like', like_count_path(@post), method: :get %> 
+<%#= button_to 'Like', {:controller => "posts", :action => "like_count", :id=>@post.id}, :method=>:get %>
+<!-- <p><%#= @post.like %></p>
+
+</p>
+<strong>Comment:</strong>
+<%#=render @post.comments %>
+</p>
+<h2>Add a comment:</h2>
+<%#= render 'comments/form' %> -->
+
+<%= link_to 'Back', posts_path %>
